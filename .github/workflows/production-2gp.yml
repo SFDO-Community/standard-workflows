@@ -16,6 +16,7 @@ jobs:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
   release-test:
     name: "Release Test"
+    environment: packaging
     needs:
       - upload-production-release-2gp
     runs-on: ubuntu-latest
