@@ -1,5 +1,12 @@
 on:
   workflow_call:
+    inputs:
+      cumulusci-version:
+        required: false
+        type: string
+      sfdx-version:
+        required: false
+        type: string
     secrets:
       dev-hub-auth-url:
         required: True
@@ -14,6 +21,8 @@ jobs:
       - uses: cumulus-actions/release-production-2gp@v1
         with:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
+          cumulusci-version: '${{ inputs.cumulusci-version }}'
+          sfdx-version: '${{ inputs.sfdx-version }}'
   release-test:
     name: "Release Test"
     environment: packaging
@@ -24,3 +33,5 @@ jobs:
       - uses: cumulus-actions/release-test@v1
         with:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
+          cumulusci-version: '${{ inputs.cumulusci-version }}'
+          sfdx-version: '${{ inputs.sfdx-version }}'
