@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: cumulus-actions/release-beta-2gp@v1
         with:
+          cumulusci-version: '${{ inputs.cumulusci-version }}'
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
   beta-test:
     name: "Beta Test"
