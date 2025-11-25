@@ -1,3 +1,14 @@
-#ECCN: Open Source
-#GUSINFO: SFDO Release Engineering, SFDO RelEng - GitHub Actions
-* @SFDO-Community/sfdo-release-engineers
+# Python
+*.py                  @SFDO-Community/sfdo-release-engineers
+
+# CumulusCI
+/cumulusci.yml        @SFDO-Community/sfdo-release-engineers
+/tasks/               @SFDO-Community/sfdo-release-engineers
+
+# Actions
+/.github                @SFDO-Community/sfdo-release-engineers
+/scripts                @SFDO-Community/sfdo-release-engineers
+
+
+#ECCN:Open Source
+#GUSINFO:Open Source,Open Source Workflow
